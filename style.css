@@ -1,0 +1,238 @@
+*{
+    border: 0;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+}
+
+body {
+    font-family: 'Oswald', sans-serif;
+}
+
+@font-face {
+    font-family: 'Hey August';
+    src: url('./fonts/Hey August.otf') format('opentype'), url('./fonts/Hey August.ttf') format('truetype');
+}
+
+header {
+    background-color: white;
+    padding: 20px 20px 50px 20px;
+    border-bottom: .6rem solid rgb(19, 19, 19);
+}
+
+.right {
+    float: right;
+}
+
+.right .social li:hover {
+    transform: scale(1.2);
+    cursor: pointer;
+}
+
+.credit-cards {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.credit-cards li {
+    margin-right: 10px;
+    display: inline-block;
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.social li {
+    display: inline-block;
+    margin: 20px 8px 0 0;
+}
+
+.social img {
+    height: 25px;
+}
+
+.right .wpp {
+    margin: 20px 0 0 0;
+    background-color: #e7b301;
+    padding: 10px;
+    border-radius: 15px;
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.right a img{
+    height: 40px;
+    margin-right: 10px;
+}
+
+.right a:hover {
+    transform: scale(1.05);
+}
+
+.button {
+    background-color: #e7b301;
+    padding: 5px 30px 5px 30px;
+    border-radius: 30px;
+}
+
+.slider {
+    position: relative;
+    overflow: hidden;
+    height: 700px;
+    width: 100vw;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
+.image {
+    position: absolute;
+    opacity: 0;
+    animation: animation 15s infinite;
+}
+
+.image:nth-child(2) {
+    animation-delay: 5s;
+}
+.image:nth-child(3) {
+    animation-delay: 10s;
+}
+
+@keyframes animation{
+    25% {
+        opacity: 1;
+        transform: scale(1.1,1.1);
+    }
+    50% {
+        opacity: 0;
+    }
+}
+
+.services {
+    display: flex;
+    background-color: #fafafa;
+    flex-direction: column;
+    align-items: center;
+}
+
+.services h1 {
+    font-family: "Hey August";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    padding: 20px 0 20px 0;
+}
+
+.container-service {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    max-width: 80vw;
+}
+
+.service {
+    height: 500px;
+    width: 334px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    text-align: center;
+    border-radius: 7%;
+    position: relative;
+    margin-bottom: 3rem;
+}
+
+.bg1 {
+    background-image: url(./assets/camera.jpg);
+}
+
+.bg2 {
+    background-image: url(./assets/quadro.jpeg);
+}
+
+.bg3 {
+    background-image: url(./assets/luz.jpg);
+}
+
+.bg4 {
+    background-image: url(./assets/aterramento.jpg);
+}
+
+.bg5 {
+    background-image: url(./assets/fiacao.jpg);
+}
+
+.bg6 {
+    background-image: url(./assets/padrao.jpg);
+}
+
+.bg7 {
+    background-image: url(./assets/cerca.jpg);
+}
+
+.bg8 {
+    background-image: url(./assets/pc.jpg);
+}
+
+.service h3 {
+    position: absolute;
+    top: 2%;
+    left: 5%;
+    right: 5%;
+    color: white;
+    font-size: 2rem;
+    max-width: 300px;
+    text-shadow: 2px 2px black;
+}
+
+.service a {
+    position: absolute;
+    color: white;
+    font-weight: 900;
+    font-size: 2rem;
+    background-color: #e7b301;
+    padding: 10px;
+    border-radius: 5px;
+    bottom: 5%;
+    right: 25%;
+    left: 25%;
+}
+
+.service a:hover {
+    background-color: #cd9f01;
+    box-shadow: 0 0.25rem 0.625rem rgb(0 0 0 / 25%);
+}
+
+footer {
+    position: relative;
+    background-color: #474646;
+    height: 10vh;
+    color: white;
+}
+
+footer .copyright {
+    font-family: 'Oswald', sans-serif;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer .madeBy {
+    position: absolute;
+    font-size: 1.2rem;
+    right: 2%;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+footer .madeBy a {
+    color: #cd9f01;
+}
