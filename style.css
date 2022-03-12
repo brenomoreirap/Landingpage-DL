@@ -145,7 +145,7 @@ header {
     text-align: center;
     border-radius: 7%;
     position: relative;
-    margin-bottom: 3rem;
+    box-shadow: 2px 2px #222;
 }
 
 .bg1 {
