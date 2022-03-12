@@ -94,6 +94,8 @@ header {
     position: absolute;
     opacity: 0;
     animation: animation 15s infinite;
+    left: 50%;
+    transform: translateX(-50%);
 }
 
 .image:nth-child(2) {
