@@ -93,7 +93,7 @@ header {
 .image {
     position: absolute;
     opacity: 0;
-    animation: animation 15s infinite;
+    animation: 20s infinite animation;
     left: 50%;
     transform: translateX(-50%);
 }
@@ -103,6 +103,9 @@ header {
 }
 .image:nth-child(3) {
     animation-delay: 10s;
+}
+.image:nth-child(4) {
+    animation-delay: 15s;
 }
 
 @keyframes animation{
