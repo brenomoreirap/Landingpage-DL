@@ -138,7 +138,7 @@ header {
     align-items: center;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    max-width: 80vw;
+    max-width: 60vw;
 }
 
 .service {
