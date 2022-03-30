@@ -1,4 +1,4 @@
-*{
+* {
     border: 0;
     margin: 0;
     padding: 0;
@@ -8,6 +8,7 @@
 
 body {
     font-family: 'Oswald', sans-serif;
+    width: 100vw;
 }
 
 @font-face {
@@ -15,63 +16,51 @@ body {
     src: url('./fonts/Hey August.otf') format('opentype'), url('./fonts/Hey August.ttf') format('truetype');
 }
 
+.container {
+    width: 80vw;
+    margin: 0 auto;
+}
+
 header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
     background-color: white;
-    padding: 20px 20px 50px 20px;
+    padding: 2em 1em;
+    width: 100%;
 }
 
-.right {
-    float: right;
-}
-
-.right .social li:hover {
+.right-header-container .social li:hover {
     transform: scale(1.2);
     cursor: pointer;
 }
 
 .credit-cards {
     display: flex;
-    justify-content: space-between;
     list-style: none;
 }
 
 .credit-cards li {
-    margin-right: 10px;
-    display: inline-block;
+    margin-right: .625em;
 }
 
-.social {
-    list-style: none;
-    display: flex;
-    justify-content: space-evenly;
-}
-
-.social li {
-    display: inline-block;
-    margin: 20px 8px 0 0;
-}
-
-.social img {
-    height: 25px;
-}
-
-.right .wpp {
-    margin: 20px 0 0 0;
-    background-color: #e7b301;
-    padding: 10px;
-    border-radius: 15px;
-    color: white;
+.right-header-container .wpp {
     display: flex;
     align-items: center;
+    justify-content: space-around;
+    width: 100%;
+    height: 4em;
+    padding: .625em;
+    margin: 20px 0 0 0;
+    background-color: #e7b301;
+    border-radius: 10px;
+    color: white;
+    font-size: 1.1rem;
 }
 
-.right a img{
+.right-header-container a img {
     height: 40px;
     margin-right: 10px;
-}
-
-.right a:hover {
-    transform: scale(1.05);
 }
 
 .button {
@@ -101,55 +90,23 @@ header {
 .image:nth-child(2) {
     animation-delay: 5s;
 }
+
 .image:nth-child(3) {
     animation-delay: 10s;
 }
+
 .image:nth-child(4) {
     animation-delay: 15s;
 }
 
-@keyframes animation{
+@keyframes animation {
     25% {
         opacity: 1;
     }
+
     50% {
         opacity: 0;
     }
-}
-
-.services {
-    display: flex;
-    background-color: #fafafa;
-    flex-direction: column;
-    align-items: center;
-}
-
-.services h1 {
-    font-family: "Hey August";
-    font-weight: normal;
-    font-style: normal;
-    font-size: 4rem;
-    text-align: center;
-    padding: 20px 0 20px 0;
-}
-
-.container-service {
-    display: flex;
-    align-items: center;
-    justify-content: space-evenly;
-    flex-wrap: wrap;
-    max-width: 60vw;
-}
-
-.service {
-    height: 500px;
-    width: 334px;
-    background-repeat: no-repeat;
-    background-size: cover;
-    text-align: center;
-    border-radius: 7%;
-    position: relative;
-    box-shadow: 2px 2px #222;
 }
 
 .bg1 {
@@ -184,32 +141,65 @@ header {
     background-image: url(./assets/pc.jpg);
 }
 
-.service.margin {
-    margin: 0 5rem 5rem 5rem
+.services {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: #fafafa;
+    width: 80vw;
 }
 
+.services h1 {
+    font-family: "Hey August";
+    font-weight: normal;
+    font-style: normal;
+    font-size: 4rem;
+    text-align: center;
+    padding: 1em 0;
+}
+
+.container-service {
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+}
+
+.service {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-between;
+    padding: 1em 0;
+    height: 500px;
+    width: 334px;
+    background-repeat: no-repeat;
+    background-size: cover;
+    border-radius: 7%;
+    box-shadow: 0 0 1px 1px #222;
+    margin: 2em;
+    transition: transform 250ms;
+}
+
+.service:hover {
+    transform: scale(1.05);
+}
+
+
 .service h3 {
-    position: absolute;
-    top: 2%;
-    left: 5%;
-    right: 5%;
     color: white;
     font-size: 2rem;
-    max-width: 300px;
     text-shadow: 2px 2px black;
 }
 
 .service a {
-    position: absolute;
     color: white;
     font-weight: 900;
     font-size: 2rem;
     background-color: #e7b301;
-    padding: 10px;
+    padding: .4em;
     border-radius: 5px;
-    bottom: 5%;
-    right: 25%;
-    left: 25%;
 }
 
 .service a:hover {
@@ -218,29 +208,42 @@ header {
 }
 
 footer {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 1.5em;
     position: relative;
     background-color: #474646;
     height: 10vh;
     color: white;
+    font-size: 1.2rem;
+    margin-top: 3em;
 }
 
 footer .copyright {
-    font-family: 'Oswald', sans-serif;
     font-size: 1.2rem;
-    position: absolute;
-    left: 2%;
-    top: 50%;
-    transform: translateY(-50%);
+}
+
+.social {
+    list-style: none;
+    display: flex;
+    gap: 2.5em;
+}
+
+.social i {
+    color: #e7b301;
+    font-size: 3rem;
+    transition: color 500ms;
+}
+
+.social i:hover {
+    color: #fff;
 }
 
 footer .madeBy {
-    position: absolute;
     font-size: 1.2rem;
-    right: 2%;
-    top: 50%;
-    transform: translateY(-50%);
 }
 
 footer .madeBy a {
-    color: #cd9f01;
+    color: #e7b301;
 }
